@@ -1,0 +1,93 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body onload="draw()">
+<canvas id="sketch" width="400" height="400">
+</canvas>
+<script>
+
+function draw() {
+	var sketch = document.getElementById('sketch');
+	var context = sketch.getContext("2d");
+
+	//red
+	context.fillStyle = "#ff0000"
+	context.beginPath();
+	context.arc(25, 50, 25, 50, 360);
+	context.closePath();
+	context.fill();
+
+	context.fillStyle = "#ff1111"
+	context.beginPath();
+	context.arc(25, 100, 25, 50, 360);
+	context.closePath();
+	context.fill();
+	
+	context.fillStyle = "#ff2222"
+	context.beginPath();
+	context.arc(25, 150, 25, 50, 360);
+	context.closePath();
+	context.fill();
+
+	context.fillStyle = "#ff3333"
+	context.beginPath();
+	context.arc(25, 200, 25, 50, 360);
+	context.closePath();
+	context.fill();
+
+	context.fillStyle = "#ff4444"
+	context.beginPath();
+	context.arc(25, 250, 25, 50, 360);
+	context.closePath();
+	context.fill();
+
+	context.fillStyle = "#ff5555"
+	context.beginPath();
+	context.arc(25, 300, 25, 50, 360);
+	context.closePath();
+	context.fill();
+
+	//blue
+	context.fillStyle = "#0000ff"
+	context.beginPath();
+	context.arc(100, 50, 25, 50, 360);
+	context.closePath();
+	context.fill();
+
+	context.fillStyle = "#1111ff"
+	context.beginPath();
+	context.arc(100, 100, 25, 50, 360);
+	context.closePath();
+	context.fill();
+	
+	context.fillStyle = "#2222ff"
+	context.beginPath();
+	context.arc(100, 150, 25, 50, 360);
+	context.closePath();
+	context.fill();
+
+	context.fillStyle = "#3333ff"
+	context.beginPath();
+	context.arc(100, 200, 25, 50, 360);
+	context.closePath();
+	context.fill();
+
+	context.fillStyle = "#4444ff"
+	context.beginPath();
+	context.arc(100, 250, 25, 50, 360);
+	context.closePath();
+	context.fill();
+
+	context.fillStyle = "#5555ff"
+	context.beginPath();
+	context.arc(100, 300, 25, 50, 360);
+	context.closePath();
+	context.fill();
+
+
+}
+
+</script>
+</body>
+</html>

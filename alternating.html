@@ -12,18 +12,22 @@ function draw() {
 	var context = sketch.getContext("2d");
 	
 	for(a = 0; a < 10; a = a + 1)
+	{
 		var c = a * 25;
 		var b = a % 2;
 		if(b == 0)
+		{
 			context.fillStyle = "#999999"
-			context.fillRect(c, 0, 20, 20);
+			context.fillRect(c, 50, 20, 20);
 
-		else
+		}else{
 			context.beginPath();
 			context.fillStyle = "#ffaa00"
-			context.arc(c, 0, 20, 20, 360);
+			context.arc(c, 50, 10, 20, 360);
 			context.closePath();
 			context.fill();
+		}
+	}
 	
 }
 </script>
