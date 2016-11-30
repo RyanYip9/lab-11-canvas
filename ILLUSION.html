@@ -15,20 +15,14 @@ function draw() {
 	var y = 0;
 
 	for(a = 0; a <= 10; a = a + 1){
-		x = (a*25);
-		
+		x = a * 25;
 		context.fillStyle = "#000000"
 		context.fillRect(x, 0, 20, 20);
 		for(b = 0; b <= 10; b = b + 1){
-			y = (a*25);
+			y = b * 25;
 			context.fillStyle = "#000000"
-			context.fillRect(0, y, 20, 20);
-			for(c = 0; c <=10; c = c + 1){
-				context.fillStyle = "#000000"
-				context.fillRect(x, y, 20, 20);
-			}
+			context.fillRect(x, y, 20, 20);
 		}
-		
 	}
 	
 }

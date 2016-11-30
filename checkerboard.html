@@ -1,0 +1,96 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body onload="draw()">
+<canvas id="sketch" width="500" height="500">
+</canvas>
+<script>
+
+function draw() {
+	var sketch = document.getElementById('sketch');
+	var context = sketch.getContext("2d");
+	//board
+	for(a = 0; a <= 15; a = a + 1){
+		x = a * 30;
+			if(a % 2 == 0){
+				context.fillStyle = "#000000"
+				context.fillRect(x, 0, 30, 30);
+				for(b = 0; b <= 15; b = b + 1){
+					y = b * 30;
+					if(b % 2 == 0){
+						context.fillStyle = "#000000"
+						context.fillRect(x, y, 30, 30);
+					}else{
+						context.fillStyle = "#ffffff"
+						context.fillRect(x, y, 30, 30);
+					}
+				}
+			}else if(a % 2 != 0){
+				context.fillStyle = "#ffffff"
+				context.fillRect(x, 0, 30, 30);
+				for(b = 0; b <= 15; b = b + 1){
+					y = b * 30;
+					if(b % 2 != 0){
+						context.fillStyle = "#000000"
+						context.fillRect(x, y, 30, 30);
+					}else{
+						context.fillStyle = "#ffffff"
+						context.fillRect(x, y, 30, 30);
+					}
+				}
+			}
+	}
+	//pieces
+	//green
+	for(c = 0; c <= 2; c = c + 1){
+		if(c % 2 == 0){
+			x = c * 30;
+			y = c * 30;
+			for(d = 0; d <= 15; d = d + 1){
+				y = d * 30;
+				if(d % 2 == 0){
+					context.fillStyle = "#00ff00"
+					context.beginPath();
+					context.arc(x+15, y+15, 15, 50, 360);
+					context.closePath();
+					context.fill();
+				}else{
+					context.fillStyle = "#00ff00"
+					context.beginPath();
+					context.arc(x-15, y+15, 15, 50, 360);
+					context.closePath();
+					context.fill();
+				}
+			}
+
+		}
+	}
+	//blue
+	for(c = 0; c <= 2; c = c + 1){
+		if(c % 2 == 0){
+			x = 480 - (c * 30);
+			y = 480 - (c * 30);
+			for(d = 0; d <= 15; d = d + 1){
+				y = d * 30;
+				if(d % 2 == 0){
+					context.fillStyle = "#0000ff"
+					context.beginPath();
+					context.arc(x-45, y+15, 15, 50, 360);
+					context.closePath();
+					context.fill();
+				}else{
+					context.fillStyle = "#0000ff"
+					context.beginPath();
+					context.arc(x-15, y+15, 15, 50, 360);
+					context.closePath();
+					context.fill();
+				}
+			}
+		}
+	}
+}
+
+</script>
+</body>
+</html>
